@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite; /* Add continuous animation */
+        }
+
+        .back-button:hover {
+            background-color: #8a2be2;
+            box-shadow: 0 4px 12px rgba(160, 116, 242, 0.5);
+        }
+
+        h1 {
+            color: #a074f2;
+            text-align: center;
+            padding-top: 60px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.3s;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .certificate {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #6a0dad;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(160, 116, 242, 0.3);
+            background-color: #1c1c1e;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 1s forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        .certificate:nth-child(even) {
+            animation-delay: 0.6s;
+        }
+
+        .certificate:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(160, 116, 242, 0.5);
+        }
+
+        .certificate img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .certificate hr {
+            margin: 0;
+            border: none;
+            border-top: 2px solid #a074f2;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .gallery-container {
+                gap: 15px;
+            }
+            .certificate {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                padding: 10px;
+            }
+            .certificate img {
+                height: auto;
+            }
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    
+    <h1>My Certificates</h1>
+    <div class="gallery-container">
+        <div class="certificate">
+            <img src="c1.png" alt="Certificate 1">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c2.jpeg" alt="Certificate 2">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c3.jpeg" alt="Certificate 3">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c4.jpeg" alt="Certificate 4">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c5.jpeg" alt="Certificate 5">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c6.jpeg" alt="Certificate 6">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c7.jpeg" alt="Certificate 7">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c8.jpeg" alt="Certificate 8">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="c9.jpeg" alt="Certificate 9">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="a1.jpeg" alt="Certificate A1">
+            <hr>
+        </div>
+        <div class="certificate">
+            <img src="a2.jpeg" alt="Certificate A2">
+            <hr>
+        </div>
+    </div>
+
+
+</body>
+</html>
